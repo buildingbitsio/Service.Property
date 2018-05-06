@@ -27,7 +27,7 @@ mongodb.MongoClient.connect(process.env.MONGO_URI, function(err, database){
 });
 
 function handleError(res, reason, message, code) {
-    console.log("ERROR: " + reason);
+    console.log("ERROR: " + reason); 
     res.status(code || 500).json({"error": message});
 }
 
