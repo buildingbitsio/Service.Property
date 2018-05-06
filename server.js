@@ -38,8 +38,6 @@ app.get("/properties", function(req, res){
         if(err){
             handleError(res, err.message, "Failed to get properties.");
         } else {
-            console.log("Found the following records");
-            console.log(docs)
             res.status(201).json(docs);
         } 
     })
